@@ -20,7 +20,7 @@ class _GamescreenState extends State<Gamescreen> {
 
           children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 41),
             child: Column(
               children: [
                   Row(
