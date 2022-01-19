@@ -204,7 +204,7 @@ floatingActionButton:FloatingActionButton.extended(onPressed: (){}, label: Row(
       child: Container(height: 35,width: 80, child: Center(child: Text("Joined")),decoration: BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.only(bottomRight:Radius.circular(15) ) ),))
 
 
-                ],
+                 ],
               ),
             ),
           )
