@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:theuno/screens/homescreen.dart';
+import 'screens/gamescreen.dart';
+
+import 'screens/Gameplayscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,9 +19,7 @@ class MyApp extends StatelessWidget {
       
         primarySwatch: Colors.blue,
       ),
-      home: const Homescreen(),
+      home: const Gamescreen()
     );
   }
 }
-
-

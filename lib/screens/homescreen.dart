@@ -11,15 +11,24 @@ class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff1D1D28),
 
 
 
-floatingActionButton:FloatingActionButton.extended(onPressed: (){}, label: Row(
+floatingActionButton:FloatingActionButton.extended(
+  backgroundColor: Color(0xff0061FF),
+  onPressed: (){}, label: Row(
+
   children: [
-        Text("Create game"),
+    
+        Container(
+          height: 40,
+          child: Center(child: Text("Create game",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 18)))),
         Icon(Icons.add)
   ],
-)),
+)
+
+),
 
 
 
@@ -35,7 +44,7 @@ floatingActionButton:FloatingActionButton.extended(onPressed: (){}, label: Row(
               width: MediaQuery.of(context).size.width * 0.955,
               height: 120,
               decoration: BoxDecoration(
-                  color: Colors.green, borderRadius: BorderRadius.circular(15)),
+                  color: Color(0xff35354B), borderRadius: BorderRadius.circular(15)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -58,7 +67,7 @@ floatingActionButton:FloatingActionButton.extended(onPressed: (){}, label: Row(
                               "Rahul ramakrishna raju kiran reddy",
                               overflow: TextOverflow.ellipsis,
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 12),
+                                  TextStyle(color: Colors.white, fontSize: 15),
                             )),
                       )
                     ],
@@ -79,6 +88,7 @@ floatingActionButton:FloatingActionButton.extended(onPressed: (){}, label: Row(
                           ),
                         ],
                       ),
+                      SizedBox(height: 22,),
                       Row(
                         children: [
                           Text(
@@ -87,7 +97,7 @@ floatingActionButton:FloatingActionButton.extended(onPressed: (){}, label: Row(
                           ),
                           Text(
                             "     240 CNS",
-                            style: TextStyle(fontSize: 16, color: Colors.black),
+                            style: TextStyle(fontSize: 16, color: Color(0xff42FF99),fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -107,14 +117,14 @@ floatingActionButton:FloatingActionButton.extended(onPressed: (){}, label: Row(
 
           /// 2nd object
           SizedBox(
-            height: 20,
+            height: 10,
           ),
           Center(
             child: Container(
               width: MediaQuery.of(context).size.width * 0.955,
               height: 120,
               decoration: BoxDecoration(
-                  color: Colors.green, borderRadius: BorderRadius.circular(15)),
+                  color: Color(0xff35354B), borderRadius: BorderRadius.circular(15)),
               child: Stack(
                 children: [
                   Row(
@@ -139,7 +149,7 @@ floatingActionButton:FloatingActionButton.extended(onPressed: (){}, label: Row(
                                   "Rahul ramakrishna raju kiran reddy",
                                   overflow: TextOverflow.ellipsis,
                                   style:
-                                      TextStyle(color: Colors.white, fontSize: 12),
+                                      TextStyle(color: Colors.white, fontSize: 15),
                                 )),
                           )
                         ],
@@ -152,23 +162,24 @@ floatingActionButton:FloatingActionButton.extended(onPressed: (){}, label: Row(
                             children: [
                               Text(
                                 "Stake",
-                                style: TextStyle(color: Colors.white, fontSize: 18),
+                                style: TextStyle(color: Colors.white, fontSize: 18,fontWeight: FontWeight.bold),
                               ),
                               Text(
                                 "     120 CNS",
-                                style: TextStyle(fontSize: 16, color: Colors.white),
+                                style: TextStyle(fontSize: 14, color: Colors.white,fontWeight: FontWeight.bold),
                               ),
                             ],
                           ),
+                          SizedBox(height: 20,),
                           Row(
                             children: [
                               Text(
                                 "Winnings",
-                                style: TextStyle(color: Colors.white, fontSize: 18),
+                                style: TextStyle(color: Colors.white, fontSize: 18,fontWeight: FontWeight.bold),
                               ),
                               Text(
                                 "     240 CNS",
-                                style: TextStyle(fontSize: 16, color: Colors.black),
+                                style: TextStyle(fontSize: 16, color: Color(0xff42FF99),fontWeight: FontWeight.bold),
                               ),
                             ],
                           ),
@@ -201,7 +212,7 @@ floatingActionButton:FloatingActionButton.extended(onPressed: (){}, label: Row(
 
     Align(
       alignment: Alignment(1, 1),
-      child: Container(height: 35,width: 80, child: Center(child: Text("Joined")),decoration: BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.only(bottomRight:Radius.circular(15) ) ),))
+      child: Container(height: 35,width: 100, child: Center(child: Text("Joined",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),)),decoration: BoxDecoration(color: Color(0xff0061FF),borderRadius: BorderRadius.only(bottomRight:Radius.circular(15) ) ),))
 
 
                  ],
