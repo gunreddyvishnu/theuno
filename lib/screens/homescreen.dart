@@ -11,6 +11,19 @@ class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+
+
+floatingActionButton:FloatingActionButton.extended(onPressed: (){}, label: Row(
+  children: [
+        Text("Create game"),
+        Icon(Icons.add)
+  ],
+)),
+
+
+
+
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
