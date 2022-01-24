@@ -93,40 +93,73 @@ class _GamescreenState extends State<Gamescreen> {
                   //   onPressed: (){}, child: Container(
                   
                   //     child: Text("I Won the Game",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),)))
-                  TextButton(
-                    style: ButtonStyle(
-                      padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(horizontal: 62,vertical: 30)),
-                      // foregroundColor: MaterialStateProperty.all<Color>(Color(0xff0061FF)),
-                      backgroundColor: MaterialStateProperty.all<Color>(Color(0xff0061FF)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  SizedBox(
+                    height: 70,
+                    width: 300,
+                    child: TextButton(
+                    
+                      style: ButtonStyle(
+                      
+                        padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(horizontal: 62,vertical: 30)),
+                        // foregroundColor: MaterialStateProperty.all<Color>(Color(0xff0061FF)),
+                        backgroundColor: MaterialStateProperty.all<Color>(Color(0xff0061FF)),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(18.0),
             
           )
         )
-                    ),
-                    onPressed: (){}, 
-                    child: Text("I Won the Game",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
-                    
+                      ),
+                      onPressed: (){}, 
+                      child: Text("I Won the Game",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                      
+                      ),
+                  ),
+                    SizedBox(height: 20,),
+                    SizedBox(
+                      height: 70,
+                      width: 300,
+                      child: TextButton(
+                      style: ButtonStyle(
+                        padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(horizontal: 70,vertical: 30)),
+                        // foregroundColor: MaterialStateProperty.all<Color>(Color(0xff0061FF)),
+                        backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(0, 0, 98, 255)),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0),
+            side: BorderSide(color: Color(0xff0061FF))
+            
+          )
+        )
+                      ),
+                      onPressed: (){}, 
+                      child: Text("I Lost the Game",style: TextStyle(color: Color(0xff0061FF),fontSize: 20,fontWeight: FontWeight.bold),),
+                      
+                      ),
                     ),
                     SizedBox(height: 20,),
-                    TextButton(
-                    style: ButtonStyle(
-                      padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(horizontal: 70,vertical: 30)),
-                      // foregroundColor: MaterialStateProperty.all<Color>(Color(0xff0061FF)),
-                      backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(0, 0, 98, 255)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    SizedBox(
+                      height: 70,
+                      width: 300,
+                      child: TextButton(
+                      style: ButtonStyle(
+                        padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(horizontal: 70,vertical: 30)),
+                        // foregroundColor: MaterialStateProperty.all<Color>(Color(0xff0061FF)),
+                        backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(0, 0, 98, 255)),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(18.0),
             side: BorderSide(color: Color.fromARGB(255, 255, 0, 0))
             
           )
         )
+                      ),
+                      onPressed: (){}, 
+                      child: Text("Error",style: TextStyle(color: Color.fromARGB(255, 255, 0, 0),fontSize: 20,fontWeight: FontWeight.bold),),
+                      
+                      ),
                     ),
-                    onPressed: (){}, 
-                    child: Text("Exit the Game",style: TextStyle(color: Color.fromARGB(255, 255, 0, 0),fontSize: 20,fontWeight: FontWeight.bold),),
-                    
-                    )
 
             
               ],
