@@ -39,13 +39,17 @@ class _WalletState extends State<Wallet> {
                 _withdrawAmount(context);
               },
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Add Coins to Your Wallet: ",style: TextStyle(fontSize: 18,color: Colors.white),),
-                    Text("",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Color(0xff0061FF)),)
-                  ],
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                  color: Color(0xff35354B),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Add Coins to Your Wallet: ",style: TextStyle(fontSize: 18,color: Colors.white),),
+                      Text("",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Color(0xff0061FF)),)
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -54,13 +58,17 @@ class _WalletState extends State<Wallet> {
                 _addAmount(context);
               },
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Withdraw Money",style: TextStyle(fontSize: 18,color: Colors.white),),
-                    Text(">",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Color(0xff0061FF)),)
-                  ],
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  color: Color(0xff35354B),
+                  padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Withdraw Money",style: TextStyle(fontSize: 18,color: Colors.white),),
+                      // Text(">",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Color(0xff0061FF)),)
+                    ],
+                  ),
                 ),
               ),
             ),
