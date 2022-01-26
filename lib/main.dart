@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:theuno/screens/account.dart';
+import 'package:theuno/screens/adddetails.dart';
+import 'package:theuno/screens/editprofile.dart';
 import 'package:theuno/screens/homescreen.dart';
+import 'package:theuno/screens/wallet.dart';
 import 'screens/gamescreen.dart';
 import 'screens/authentication.dart';
 
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       
       ),
-      home:  Account()
+      home:  Editprofile()
     );
   }
 }
