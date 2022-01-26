@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:theuno/screens/account.dart';
 import 'package:theuno/screens/homescreen.dart';
 import 'screens/gamescreen.dart';
+import 'screens/authentication.dart';
 
-import 'screens/Gameplayscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,9 +18,10 @@ class MyApp extends StatelessWidget {
      
       theme: ThemeData(
       
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
+      
       ),
-      home: const Gamescreen()
+      home:  Account()
     );
   }
 }
