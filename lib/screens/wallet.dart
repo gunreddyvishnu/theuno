@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 
 
@@ -33,26 +35,33 @@ class _WalletState extends State<Wallet> {
             ),
             SizedBox(height: 20,),
             GestureDetector(
-              onTap: () {print("pressed");},
+              onTap: () {
+                _withdrawAmount(context);
+              },
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Add Coins to Your Wallet: ",style: TextStyle(fontSize: 18,color: Colors.white),),
-                    Text(">",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Color(0xff0061FF)),)
+                    Text("",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Color(0xff0061FF)),)
                   ],
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Withdraw Money",style: TextStyle(fontSize: 18,color: Colors.white),),
-                  Text(">",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Color(0xff0061FF)),)
-                ],
+            GestureDetector(
+              onTap: () {
+                _addAmount(context);
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Withdraw Money",style: TextStyle(fontSize: 18,color: Colors.white),),
+                    Text(">",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Color(0xff0061FF)),)
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 30,),
@@ -86,7 +95,129 @@ class _WalletState extends State<Wallet> {
         ]),
       ),
     );
+    
   }
+  void _addAmount(context){
+    showModalBottomSheet(context: context, builder: (BuildContext bc){
+        return Container(
+          height: MediaQuery.of(context).size.height*.30,
+          color: Color(0xff35354B),
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              children: [
+                Text("Enter Amount to add",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+                SizedBox(height: 20,),
+                Container(
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 235, 234, 234),
+                        borderRadius: BorderRadius.circular(14.0),
+                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'Amount',
+                          hintStyle: TextStyle(color: Color.fromARGB(255, 119, 118, 118)),
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide.none,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20,),
+                    SizedBox(
+                height: 65,
+                width: 400,
+                child: TextButton(
+                      
+                        style: ButtonStyle(
+                        
+                          padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(horizontal: 62,vertical: 30)),
+                          // foregroundColor: MaterialStateProperty.all<Color>(Color(0xff0061FF)),
+                          backgroundColor: MaterialStateProperty.all<Color>(Color(0xff0061FF)),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0),
+            
+          )
+        )
+                        ),
+                        onPressed: (){}, 
+                        child: Text("Proceed",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                        
+                        ),
+              ),
+                
+
+              ],
+            )
+          ),
+        );
+    });
+  }
+  void _withdrawAmount(context){
+    showModalBottomSheet(context: context, builder: (BuildContext bc){
+        return Container(
+          height: MediaQuery.of(context).size.height*.30,
+          color: Color(0xff35354B),
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              children: [
+                Text("Enter Withdraw Amount",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+                SizedBox(height: 20,),
+                Container(
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 235, 234, 234),
+                        borderRadius: BorderRadius.circular(14.0),
+                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'Amount',
+                          hintStyle: TextStyle(color: Color.fromARGB(255, 119, 118, 118)),
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide.none,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20,),
+                    SizedBox(
+                height: 65,
+                width: 400,
+                child: TextButton(
+                      
+                        style: ButtonStyle(
+                        
+                          padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(horizontal: 62,vertical: 30)),
+                          // foregroundColor: MaterialStateProperty.all<Color>(Color(0xff0061FF)),
+                          backgroundColor: MaterialStateProperty.all<Color>(Color(0xff0061FF)),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0),
+            
+          )
+        )
+                        ),
+                        onPressed: (){}, 
+                        child: Text("Proceed",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                        
+                        ),
+              ),
+                
+
+              ],
+            )
+          ),
+        );
+    });
+  }
+  
+  
 }
+
+
+
 
 
